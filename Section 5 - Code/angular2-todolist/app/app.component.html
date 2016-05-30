@@ -1,0 +1,13 @@
+<h1>{{today | date:"fullDate"}}</h1>
+<div>
+    <div class="form-group">
+        <label for="usr">New Task:</label>
+        <input [(ngModel)]="task"  class="form-control"> 
+    </div>
+    <button (click)="addNewTask()"  class='btn btn-default' myHighlight>Add Task</button>
+</div>
+<div>
+    <div class="list-group">
+        <a href="#" (click)="removeTask(item)" *ngFor="#item of taskList" class="list-group-item">{{item.name}}</a>
+    </div>
+</div>

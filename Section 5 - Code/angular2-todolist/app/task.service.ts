@@ -7,7 +7,9 @@ export class TaskService {
     return TASKS;
   };
   addTask(task) {
-    TASKS.push(task);
+    if(task.name != '') {
+      TASKS.push(task);
+    }
   };
   deleteTask (task) {
     for (var i=0; i<TASKS.length; i++) {
